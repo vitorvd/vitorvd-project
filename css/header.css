@@ -42,8 +42,42 @@ nav > ul.menu-desktop li {
     margin: 0 20px;
 }
 
-nav > i.menu-hamburger {
+/* Menu Mobile / Hamburguer */
+nav > i.menu-hamburguer {
     display: none;
+}
+
+nav > ul.menu-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(15, 15, 15, 0.95);
+    color: wheat;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-100%); /* esconde o menu-mobile */
+    transition: transform 0.4s ease-in;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+nav > ul.menu-mobile a{
+    color: wheat;
+}
+
+nav > ul.menu-mobile li {
+    margin: 12px;
+    cursor: pointer;
+}
+
+.show-menu-mobile {
+    transform: translateY(0) !important; /* exibe o menu-mobile */
+}
+
+.menu-link {
+    
 }
 
 /* Responsive CSS */
@@ -54,9 +88,11 @@ nav > i.menu-hamburger {
         padding-left: 0;
         padding-right: 0;
     }
-    nav > i.menu-hamburger {
+    nav > i.menu-hamburguer {
         display: flex;
         color: rgba(255, 255, 255, 0.9);
+        cursor: pointer;
+        z-index: 100;
     }
     nav > ul.menu-desktop { /* removerá o menu "ul" e suas "li" */
         display: none;
