@@ -76,10 +76,6 @@ nav > ul.menu-mobile li {
     transform: translateY(0) !important; /* exibe o menu-mobile */
 }
 
-.menu-link {
-    
-}
-
 /* Responsive CSS */
 @media (max-width: 1023px){
     header > div.header-settings {
