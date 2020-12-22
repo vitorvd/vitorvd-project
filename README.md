@@ -3,5 +3,5 @@ Primeiro projeto responsivo feito em HTML e CSS, com um único intuito: aprendiz
 
 # Linguagens, frameworks e APIS sendo utilizadas:
 - HTML 5
-- CSS 3
+- CSS 3 (com o pré compilador SASS)
 - JavaScript
