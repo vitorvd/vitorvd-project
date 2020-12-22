@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* Header: Profile and Navigation */
+header {
+  background-color: rgba(15, 15, 15, 0.95);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+header .header-settings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 50%;
+  height: 64px;
+  /* Responsive CSS */
+}
+header .header-settings a {
+  color: rgba(255, 255, 255, 0.9);
+}
+header .header-settings .profile {
+  display: flex;
+  align-items: center;
+}
+header .header-settings .profile img {
+  border-radius: 94%;
+  height: 64px;
+  width: 70px;
+  margin-right: 15px;
+  object-fit: cover;
+}
+header .header-settings nav > ul.menu-desktop {
+  display: flex;
+}
+header .header-settings nav > ul.menu-desktop li {
+  margin: 0 20px;
+}
+header .header-settings nav > ul.menu-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(15, 15, 15, 0.95);
+  color: wheat;
+  width: 100vw;
+  height: 100vh;
+  transform: translateY(-100%);
+  /* esconde o menu-mobile */
+  transition: transform 0.4s ease-in;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+header .header-settings nav > ul.menu-mobile a {
+  color: wheat;
+}
+header .header-settings nav > ul.menu-mobile li {
+  margin: 12px;
+  cursor: pointer;
+}
+header .header-settings nav > ul.menu-mobile li::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid wheat;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+header .header-settings nav > ul.menu-mobile li:hover::before {
+  opacity: 1;
+}
+header .header-settings nav > i.menu-hamburguer {
+  display: none;
+  /* esconde o menu hamburguer enquanto a tela for > 1023px */
+}
+header .header-settings nav > ul.show-menu-mobile {
+  transform: translateY(0) !important;
+  /* exibe o menu-mobile */
+}
+@media (max-width: 1023px) {
+  header .header-settings {
+    /* Responsive CSS */
+    max-width: 100%;
+    margin: 0 50px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  header .header-settings nav > i.menu-hamburguer {
+    display: flex;
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    z-index: 100;
+  }
+  header .header-settings nav > ul.menu-desktop {
+    /* removerá o menu "ul" e suas "li" */
+    display: none;
+  }
+}

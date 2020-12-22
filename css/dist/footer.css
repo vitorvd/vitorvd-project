@@ -1,0 +1,22 @@
+/* Footer CSS */
+footer {
+  width: 100%;
+  position: fixed;
+  box-shadow: 2px 3px 4px rgba(18, 18, 18, 0.12);
+  background-color: #ffffff;
+  bottom: 0;
+  text-align: center;
+}
+footer > div {
+  max-width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+footer > div > a {
+  color: rgba(15, 15, 15, 0.95);
+  transition: color 0.5s;
+}
+footer > div > a:hover {
+  color: #187888;
+}
